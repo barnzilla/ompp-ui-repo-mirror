@@ -97,11 +97,11 @@
             <q-radio v-model="fastDownload" val="yes" :disable="!serverConfig.AllowDownload" :label="$t('Fast, only to analyze output values')" />
             <br />
             <q-radio v-model="fastDownload" val="no" :disable="!serverConfig.AllowDownload" :label="$t('Full, compatible with desktop model')" />
-			<br />
-			<q-radio v-model="csvDownloadEnumCodes" val="yes" :disable="!serverConfig.AllowDownload" :label="$t('Download CSV with enum codes')" />
-			<br />
-			<q-radio v-model="csvDownloadEnumCodes" val="no" :disable="!serverConfig.AllowDownload" :label="$t('Download CSV with enum IDs')" />
-			<br />
+            <br />
+            <q-radio v-model="csvDownloadEnumCodes" val="yes" :disable="!serverConfig.AllowDownload" :label="$t('Download CSV with enum codes')" />
+            <br />
+            <q-radio v-model="csvDownloadEnumCodes" val="no" :disable="!serverConfig.AllowDownload" :label="$t('Download CSV with enum IDs')" />
+            <br />
             <template v-if="!!serverConfig.AllowMicrodata">
               <br />
               <q-checkbox v-model="isMicroDownload" :disable="!serverConfig.AllowDownload || fastDownload === 'yes'" :label="$t('Do full downloads, including microdata')"/>

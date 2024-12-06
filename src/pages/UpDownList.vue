@@ -61,10 +61,10 @@
               <br />
               <q-radio v-model="fastDownload" val="no"  :label="$t('Do full downloads, compatible with desktop model')" />
               <br />
-			  <q-radio v-model="csvDownloadEnumCodes" val="yes" :disable="!serverConfig.AllowDownload" :label="$t('Download CSV with enum codes')" />
-			  <br />
-			  <q-radio v-model="csvDownloadEnumCodes" val="no" :disable="!serverConfig.AllowDownload" :label="$t('Download CSV with enum IDs')" />
-			  <br />
+              <q-radio v-model="csvDownloadEnumCodes" val="yes" :disable="!serverConfig.AllowDownload" :label="$t('Download CSV with enum codes')" />
+              <br />
+              <q-radio v-model="csvDownloadEnumCodes" val="no" :disable="!serverConfig.AllowDownload" :label="$t('Download CSV with enum IDs')" />
+              <br />
               <q-checkbox v-model="isMicroDownload" :disable="fastDownload === 'yes' || !serverConfig.AllowMicrodata" :label="$t('Do full downloads, including microdata')"/>
             </td>
           </tr>
