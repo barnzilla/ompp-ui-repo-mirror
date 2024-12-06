@@ -300,7 +300,7 @@ export default {
       uploadUserViewsTickle: false,
       uploadUserViewsDone: false,
       fastDownload: 'yes',
-	  csvDownloadEnumCodes: 'yes',
+      csvDownloadEnumCodes: 'yes',
       isMicroDownload: false,
       labelKind: 'default'
     }
@@ -368,7 +368,7 @@ export default {
     doRefresh () {
       this.clearState()
       this.fastDownload = this.noAccDownload ? 'yes' : 'no'
-	  this.csvDownloadEnumCodes = this.noAccDownload ? 'yes' : 'no'
+      this.csvDownloadEnumCodes = this.noAccDownload ? 'yes' : 'no'
       this.isMicroDownload = !this.noAccDownload && !this.noMicrodataDownload && !!this.serverConfig.AllowMicrodata
       this.labelKind = (this.treeLabelKind === 'name-only' || this.treeLabelKind === 'descr-only') ? this.treeLabelKind : 'default'
 
