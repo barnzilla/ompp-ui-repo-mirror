@@ -97,6 +97,11 @@
             <q-radio v-model="fastDownload" val="yes" :disable="!serverConfig.AllowDownload" :label="$t('Fast, only to analyze output values')" />
             <br />
             <q-radio v-model="fastDownload" val="no" :disable="!serverConfig.AllowDownload" :label="$t('Full, compatible with desktop model')" />
+			<br />
+			<q-radio v-model="csvDownloadEnumCodes" val="yes" :disable="!serverConfig.AllowDownload" :label="$t('Download CSV with enum codes')" />
+			<br />
+			<q-radio v-model="csvDownloadEnumCodes" val="no" :disable="!serverConfig.AllowDownload" :label="$t('Download CSV with enum IDs')" />
+			<br />
             <template v-if="!!serverConfig.AllowMicrodata">
               <br />
               <q-checkbox v-model="isMicroDownload" :disable="!serverConfig.AllowDownload || fastDownload === 'yes'" :label="$t('Do full downloads, including microdata')"/>
@@ -295,6 +300,7 @@ export default {
       uploadUserViewsTickle: false,
       uploadUserViewsDone: false,
       fastDownload: 'yes',
+	  csvDownloadEnumCodes: 'yes',
       isMicroDownload: false,
       labelKind: 'default'
     }
@@ -362,6 +368,7 @@ export default {
     doRefresh () {
       this.clearState()
       this.fastDownload = this.noAccDownload ? 'yes' : 'no'
+	  this.csvDownloadEnumCodes = this.noAccDownload ? 'yes' : 'no'
       this.isMicroDownload = !this.noAccDownload && !this.noMicrodataDownload && !!this.serverConfig.AllowMicrodata
       this.labelKind = (this.treeLabelKind === 'name-only' || this.treeLabelKind === 'descr-only') ? this.treeLabelKind : 'default'
 

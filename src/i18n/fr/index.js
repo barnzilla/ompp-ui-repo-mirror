@@ -181,6 +181,8 @@ export default {
   'Do not write model version into run log': "N'écrivez pas la version du modèle dans le journal d'exécution",
   'Download': 'Télécharger',
   'Download completed': 'Téléchargement terminé',
+  'Download CSV with enum codes': 'Download CSV with enum codes',
+  'Download CSV with enum IDs': 'Download CSV with enum IDs',
   'Download error': 'Erreur de téléchargement',
   'Download Log': 'Télécharger le journal',
   'Download views of': 'Télécharger des vues de',
